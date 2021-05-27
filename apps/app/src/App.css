@@ -1,0 +1,24 @@
+.app {
+  display: grid;
+  grid-template-columns: auto 300px auto;
+}
+
+.uploader {
+	width: 100%;
+}
+
+.options {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+}
+
+.header {
+	font-size: 20px;
+	line-height: 20px;
+	margin-bottom: 10px;
+}
+
+.result {
+	width: 100%;
+}

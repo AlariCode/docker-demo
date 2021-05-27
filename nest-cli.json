@@ -1,0 +1,30 @@
+{
+	"collection": "@nestjs/schematics",
+	"sourceRoot": "apps/converter/src",
+	"monorepo": true,
+	"root": "apps/converter",
+	"compilerOptions": {
+		"webpack": true,
+		"tsConfigPath": "apps/converter/tsconfig.app.json"
+	},
+	"projects": {
+		"converter": {
+			"type": "application",
+			"root": "apps/converter",
+			"entryFile": "main",
+			"sourceRoot": "apps/converter/src",
+			"compilerOptions": {
+				"tsConfigPath": "apps/converter/tsconfig.app.json"
+			}
+		},
+		"api": {
+			"type": "application",
+			"root": "apps/api",
+			"entryFile": "main",
+			"sourceRoot": "apps/api/src",
+			"compilerOptions": {
+				"tsConfigPath": "apps/api/tsconfig.app.json"
+			}
+		}
+	}
+}
