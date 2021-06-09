@@ -11,6 +11,6 @@ RUN PUBLIC_URL=http://192.168.1.35:3001 npm run build
 
 FROM nginx:1.13
 COPY --from=node /app/apps/app/build /usr/share/nginx/html
-COPY ./nginx.conf /etc/nginx/conf.d/default.conf
+COPY ./apps/app/nginx.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
