@@ -7,7 +7,7 @@ WORKDIR /app
 RUN npm i
 WORKDIR /app/apps/app
 ARG env=prod
-RUN PUBLIC_URL=http://image.converter npm run build
+RUN PUBLIC_URL=http://image.local npm run build
 
 FROM nginx:1.13
 COPY --from=node /app/apps/app/build /usr/share/nginx/html
