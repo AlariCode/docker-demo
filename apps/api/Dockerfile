@@ -7,7 +7,11 @@ RUN npm run build api
 
 FROM node:14-alpine
 WORKDIR /opt/app
-ADD package.json ./
-RUN npm install --only=prod
+# ADD package.json ./
+# RUN npm install --only=prod
+COPY --from=build /opt/app/node_modules ./node_modules
 COPY --from=build /opt/app/dist/apps/api ./dist
+COPY package.json ./
+
+EXPOSE 3000
 CMD ["node", "./dist/main.js"]
